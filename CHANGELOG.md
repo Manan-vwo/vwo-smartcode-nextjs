@@ -11,10 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Default `type` to `SYNC` when SmartCode version is `3.0` when no `type` prop is passed
 
-### Added
-
-- Documented the `version` prop in README
-- Added README warning that SmartCode `3.0` must be enabled and reflected on the VWO dashboard; contact CSM or VWO Support to enable it
 
 ## [1.4.4] - 2026-06-17
 
