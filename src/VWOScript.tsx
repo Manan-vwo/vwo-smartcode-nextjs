@@ -46,7 +46,7 @@ export const VWOScript: React.FC<VWOScriptProps> = ({
   try {
     const resolvedType = type ?? (version === 3.0 ? 'SYNC' : 'ASYNC');
     const scriptType =
-      typeof resolvedType === 'string' ? resolvedType.toLowerCase() : 'async';
+      resolvedType.toLowerCase();
 
     if (!accountId) {
       console.error('VWO: Account ID is required');
