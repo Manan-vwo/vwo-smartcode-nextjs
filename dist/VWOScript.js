@@ -34,9 +34,10 @@ var react_1 = __importDefault(require("react"));
 var DEFAULT_VWO_SMARTCODE_VERSION = 2.2;
 var isValidVwoSmartCodeVersion = function (version) { return version === 2.2 || version === 3.0; };
 var VWOScript = function (_a) {
-    var accountId = _a.accountId, _b = _a.version, version = _b === void 0 ? DEFAULT_VWO_SMARTCODE_VERSION : _b, _c = _a.type, type = _c === void 0 ? 'ASYNC' : _c, _d = _a.settingsTimeout, settingsTimeout = _d === void 0 ? 2000 : _d, _e = _a.hideElement, hideElement = _e === void 0 ? 'body' : _e, _f = _a.hideElementStyle, hideElementStyle = _f === void 0 ? 'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important' : _f, _g = _a.scriptAttributes, scriptAttributes = _g === void 0 ? {} : _g, _h = _a.linkAttributes, linkAttributes = _h === void 0 ? {} : _h;
+    var accountId = _a.accountId, _b = _a.version, version = _b === void 0 ? DEFAULT_VWO_SMARTCODE_VERSION : _b, type = _a.type, _c = _a.settingsTimeout, settingsTimeout = _c === void 0 ? 2000 : _c, _d = _a.hideElement, hideElement = _d === void 0 ? 'body' : _d, _e = _a.hideElementStyle, hideElementStyle = _e === void 0 ? 'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important' : _e, _f = _a.scriptAttributes, scriptAttributes = _f === void 0 ? {} : _f, _g = _a.linkAttributes, linkAttributes = _g === void 0 ? {} : _g;
     try {
-        var scriptType = typeof type === 'string' ? type.toLowerCase() : 'async';
+        var resolvedType = type !== null && type !== void 0 ? type : (version === 3.0 ? 'SYNC' : 'ASYNC');
+        var scriptType = typeof resolvedType === 'string' ? resolvedType.toLowerCase() : 'async';
         if (!accountId) {
             console.error('VWO: Account ID is required');
             return null;

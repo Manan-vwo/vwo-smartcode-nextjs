@@ -36,7 +36,7 @@ interface VWOScriptProps {
 export const VWOScript: React.FC<VWOScriptProps> = ({
   accountId,
   version = DEFAULT_VWO_SMARTCODE_VERSION,
-  type = 'ASYNC',
+  type,
   settingsTimeout = 2000,
   hideElement = 'body',
   hideElementStyle = 'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important',
@@ -44,7 +44,9 @@ export const VWOScript: React.FC<VWOScriptProps> = ({
   linkAttributes = {},
 }) => {
   try {
-    const scriptType = typeof type === 'string' ? type.toLowerCase() : 'async';
+    const resolvedType = type ?? (version === 3.0 ? 'SYNC' : 'ASYNC');
+    const scriptType =
+      typeof resolvedType === 'string' ? resolvedType.toLowerCase() : 'async';
 
     if (!accountId) {
       console.error('VWO: Account ID is required');

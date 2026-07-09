@@ -89,7 +89,7 @@ The `VWOScript` component accepts the following props:
 | ------------------ | ------------------------ | -------- | -------------------------------------------------------------------------------------- | --------------------------------------------------- |
 | `accountId`        | `string`                 | ✅ Yes   | `null`                                                                                 | Your VWO account ID                                 |
 | `version`          | `2.2 \| 3.0`             | No       | `2.2`                                                                                  | SmartCode version to load                           |
-| `type`             | `'ASYNC' \| 'SYNC'`      | No       | `'ASYNC'`                                                                              | Type of VWO script loading                          |
+| `type`             | `'ASYNC' \| 'SYNC'`      | No       | `'ASYNC'` for version `2.2`, `'SYNC'` for version `3.0`                                | Type of VWO script loading                          |
 | `settingsTimeout`  | `number`                 | No       | `2000`                                                                                 | Timeout for settings initialization                 |
 | `hideElement`      | `string`                 | No       | `'body'`                                                                               | CSS selector for the element to be hidden           |
 | `hideElementStyle` | `string`                 | No       | `'opacity:0 !important;filter:alpha(opacity=0) !important;background:white !important;transition:none !important;'` | CSS styles applied to the hidden element            |
