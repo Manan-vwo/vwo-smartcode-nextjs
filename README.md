@@ -88,6 +88,7 @@ The `VWOScript` component accepts the following props:
 | Prop               | Type                     | Required | Default                                                                                | Description                                         |
 | ------------------ | ------------------------ | -------- | -------------------------------------------------------------------------------------- | --------------------------------------------------- |
 | `accountId`        | `string`                 | ✅ Yes   | `null`                                                                                 | Your VWO account ID                                 |
+| `version`          | `2.2 \| 3.0`             | No       | `2.2`                                                                                  | SmartCode version to load                           |
 | `type`             | `'ASYNC' \| 'SYNC'`      | No       | `'ASYNC'`                                                                              | Type of VWO script loading                          |
 | `settingsTimeout`  | `number`                 | No       | `2000`                                                                                 | Timeout for settings initialization                 |
 | `hideElement`      | `string`                 | No       | `'body'`                                                                               | CSS selector for the element to be hidden           |
@@ -96,6 +97,7 @@ The `VWOScript` component accepts the following props:
 | `scriptAttributes` | `Record<string, string>` | No       | `{}`                                                                                   | Additional attributes to be added to the script tag. Note: `id` will be overridden and `referrerPolicy` will be overridden in case of `SYNC` SmartCode |
 | `linkAttributes`   | `Record<string, string>` | No       | `{}`                                                                                   | Additional attributes to be added to the link tag.  |
 
+> **Warning:** SmartCode version `3.0` will only work if it is enabled and reflected on your VWO dashboard. If you do not see version `3.0` in your dashboard, please contact your CSM or VWO Support to have it enabled.
 
 ## Authors
 
