@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Default `type` to `SYNC` when SmartCode version is `3.0` when no `type` prop is passed
+- Default `type` to `SYNC` when SmartCode version is `3.0` and no `type` prop is passed
 
 
 ## [1.4.4] - 2026-06-17
