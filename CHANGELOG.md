@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Fixed SmartCode 2.2 hide element re-insertion to prevent anti-flicker.
+- Updated SmartCode 2.2 hide element re-insertion logic to prevent anti-flicker.
 ## [1.4.5] - 2026-07-09
 
 ### Changed
