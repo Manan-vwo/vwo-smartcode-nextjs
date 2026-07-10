@@ -7,10 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.4.6] - 2026-07-10
 
-### Fixed
+### Changed
 
-- Fixed SmartCode 2.2 hide element re-insertion in the `requestAnimationFrame` loop so the body overlay `#_vis_opt_path_hides` is placed as a sibling after `<head>` instead of inside `<head>`, matching initial placement and ensuring anti-flicker hiding works correctly in Next.js (especially App Router)
-
+- Fixed SmartCode 2.2 hide element re-insertion to prevent anti-flicker.
 ## [1.4.5] - 2026-07-09
 
 ### Changed
